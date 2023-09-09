@@ -1,24 +1,27 @@
+"use client"
 
-import React from 'react'
-
+import React, { useEffect, useState, useRef } from 'react'
+import data from "../../Db/data.json";
 
 export default function Banner() {
-  return(
-     <div>
-       {/* <Carousel 
-         autoPlay
-         infiniteLoop
-         showStatus={false}
-         showIndicators={false}
-         showThumbs={false}
-         interval={5000}
-       
-       >
-        <div>
-           <img loading='lazy' src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?t=st=1694145814~exp=1694146414~hmac=fcb4af3711c1fcb2202283a94a7e9c3406491989aeeddbcaef92d3b30dd9a5e0" alter="">
-        </div>
+  
+  const [image, setimage] = useState()
+  const indexo0fimg = useRef(0)
 
-       </Carousel> */}
-  </div>
-  )
+  useEffect(() => {
+       const interval = setInterval(() => {
+        setimage(data.imageUrls[indexo0fimg.current]);
+        indexo0fimg.current = (indexo0fimg.current + 1) % data.imageUrls.length;
+       }, 2000);
+
+       // Cleanup function to clear the interval when the component unmounts
+       return () => clearInterval(interval);
+  }, [])
+
+  return (
+    <div className="relative">
+      <div className="absolute w-full bg-gradient-to-t h-32 from-gray-100  to-transparent  bottom-0 z-20"/>
+         <img className="w-[1300px]  h-[600px] container  " src={image} alt="" />
+    </div>
+  );
 }
