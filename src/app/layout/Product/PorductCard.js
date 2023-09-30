@@ -1,4 +1,5 @@
 import { Pirata_One } from 'next/font/google';
+import Image from 'next/image';
 import React from 'react'
 
 export default function PorductCard({ title, price, description, image, rating }) {
@@ -8,7 +9,7 @@ export default function PorductCard({ title, price, description, image, rating }
       <div>
         <div className="border border-gray-300 p-y-4  w-[242px] h-[501px] rounded-lg shadow-md">
           <div className=" px-4 w-[242px]   h-[224px] bg-grays">
-            <img
+            <Image
               src={image}
               alt={title}
               className="w-full h-[224px] py-1 object-contain rounded-md"
@@ -16,7 +17,9 @@ export default function PorductCard({ title, price, description, image, rating }
           </div>
 
           <div className="w-[242px]  h-[224px] mx-2">
-            <h3 className="text-[16] w-[242px] h-[150] pb-1 font-sans ">{title}</h3>
+            <h3 className="text-[16] w-[242px] h-[150] pb-1 font-sans ">
+              {title}
+            </h3>
 
             <div className="flex items-center">
               <div className="text-yellow-400">
