@@ -21,8 +21,14 @@ export default function Banner() {
 
   return (
     <div className="relative">
-      <div className="absolute w-full bg-gradient-to-t h-32 from-gray-100  to-transparent  bottom-0 z-20"/>
-         <Image className="w-[1300px]  h-[600px] container  " src={image} alt="" />
+      <div className="absolute w-full bg-gradient-to-t h-32 from-gray-100  to-transparent  bottom-0 z-20" />
+      <Image
+        width={800}
+        height={800}
+        className="w-[1300px]  h-[600px] container  "
+        src={image}
+        alt=""
+      />
     </div>
   );
 }

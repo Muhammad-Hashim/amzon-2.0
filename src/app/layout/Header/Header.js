@@ -1,16 +1,19 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <>
       <nav className="bg-amazon_blue  bg-[#131921] py-2">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container flex items-center justify-between mx-auto">
           {/* Amazon Logo */}
-          <img
+          <Image
+            width={400}
+            height={400}
             src="https://www.nicepng.com/png/full/16-167642_amazon-logo-amazon-logo-white-text.png"
             alt="Amazon Logo "
-            className="w-24  mr-3 mt-3"
+            className="w-24 mt-3 mr-3"
           />
 
           {/* Search Bar */}
@@ -19,17 +22,17 @@ const Header = () => {
             placeholder="Search..."
             className="w-2/3 px-2 py-1 rounded-l-lg focus:outline-none"
           />
-          <button className="px-4 py-1 bg-yellow-400 text-black rounded-r-lg hover:bg-yellow-500 focus:outline-none">
+          <button className="px-4 py-1 text-black bg-yellow-400 rounded-r-lg hover:bg-yellow-500 focus:outline-none">
             Search
           </button>
 
           {/* Navigation Links */}
           <div className="flex items-center space-x-3 text-white">
             <div className="group">
-              <p className="hover:underline ml-3">
+              <p className="ml-3 hover:underline">
                 Hello, <b>Sign in</b>{" "}
               </p>
-              <div className="hidden group-hover:block space-y-2 absolute bg-white text-black p-4 w-36">
+              <div className="absolute hidden p-4 space-y-2 text-black bg-white group-hover:block w-36">
                 {/* Sign-In Content */}
                 {/* Add your sign-in/sign-out logic here */}
                 <p>Your account</p>
@@ -48,7 +51,7 @@ const Header = () => {
                 Prime
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-1 text-yellow-300 group-hover:text-yellow-400"
+                  className="w-5 h-5 ml-1 text-yellow-300 group-hover:text-yellow-400"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -59,7 +62,7 @@ const Header = () => {
                   />
                 </svg>
               </p>
-              <div className="hidden group-hover:block space-y-2 absolute bg-white text-black p-4 w-36">
+              <div className="absolute hidden p-4 space-y-2 text-black bg-white group-hover:block w-36">
                 {/* Prime Content */}
                 {/* Add your Prime-related content here */}
                 <p>Prime Membership</p>

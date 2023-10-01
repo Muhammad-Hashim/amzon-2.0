@@ -17,9 +17,21 @@ async function getData() {
   
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-4 " >
+      <div className="flex flex-wrap justify-center gap-4 ">
         {data.map((item) => (
           <PorductCard
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            description={item.description}
+            image={item.image}
+            rating={item.rating}
+          />
+        ))}
+        {data.map((item) => (
+          <PorductCard
+            key={item.id}
             id={item.id}
             title={item.title}
             price={item.price}

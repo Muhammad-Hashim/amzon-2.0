@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-2 text-sm   flex justify-start">
+    <nav className="flex justify-start p-2 text-sm bg-gray-800">
       <div className="flex space-x-3 text-white">
         <Link className="hover:text-gray-300" href="/">
           All
         </Link>
         <Link className="hover:text-gray-300" href="/">
-          Today's Deals
+          Toda Deals
         </Link>
         <Link className="hover:text-gray-300" href="/">
           Buy Again
@@ -21,7 +21,7 @@ const Navbar = () => {
           Customer Service
         </Link>
         <Link className="hover:text-gray-300" href="/">
-          Muhammad's Amazon.com
+          Muhammad  Amazon.com
         </Link>
         <Link className="hover:text-gray-300" href="/">
           Browsing History
