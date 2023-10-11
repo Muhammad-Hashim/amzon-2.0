@@ -11,21 +11,24 @@ export default function PorductCard({
 }) {
   return (
     <div>
-      <div className="border border-gray-300 p-y-4  w-[242px] h-[501px] rounded-lg shadow-md">
-        <div className=" px-4 w-[242px]   h-[224px] bg-grays">
+      <div className="border  border-gray-100 p-y-4  w-[400px] h-[601px]  shadow-md">
+        <div className=" px-4 w-[400]    h-[300px">
           <Image
             src={image}
             alt={title}
             width={400}
             height={400}
-            className="w-full h-[224px] py-1 object-contain rounded-md"
+            className="w-full h-[224px]  py-1 object-contain rounded-md"
           />
         </div>
 
-        <div className="w-[242px]  h-[224px] mx-2 ">
-          <h3 className="text-[16] w-[242px] h-[150] pb-1 font-sans ">
+        <div className="w-[400px]  h-[300px] mx-2 ">
+          <h3 className="text-[16] w-[400px] font-medium h-[150] pb-1 font-sans ">
             {title}
           </h3>
+          <p className="text-[14] w-[390px]  h-[100px]  pb-1 font-sans overflow-hidden  ">
+            {description}
+          </p>
 
           <div className="flex items-center ">
             <div className="text-yellow-400">
@@ -55,7 +58,7 @@ export default function PorductCard({
             </div>
           </div>
           <div class="mt-4  self-end  flex items-center space-x-4">
-            <button class="px-16 py-2  self-end  bg-[#EAB308] text-black rounded-md hover:bg-blue-600 transition duration-300">
+            <button class="px-[120px] py-2  self-end bg-gradient-to-b from-yellow-200 to-yellow-400   text-black rounded-md hover:bg-blue-600 ">
               Add to Cart
             </button>
           </div>
